@@ -104,11 +104,6 @@ int heap_insert(heap* h, int key) {
 /* Gibt den Speicher von einem Heap wieder frei
  */
 void heap_free(heap* h) {
-	int i=0;
-	while (i < h->size) {
-		free(h->element[i]);
-		i++;
-		&;
-	}
-	free(h);
+	free(h->elements);
+	free(h);	
 }
